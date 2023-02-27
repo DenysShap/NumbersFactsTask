@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/number_text"
+        style="@style/TextBoldHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textSize="@dimen/numbers_title_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="104" />
+
+    <TextView
+        android:id="@+id/fact_text"
+        style="@style/TextNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/medium"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number_text"
+        tools:text="104 is the number of Corinthian columns in the Temple of Olympian Zeus, the largest temple ever built in Greece." />
+
+    <ImageView
+        android:id="@+id/arrow_forward_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:padding="@dimen/padding_forward_image"
+        android:src="@drawable/arrow_forward_navigation"
+        app:layout_constraintBottom_toBottomOf="@id/fact_text"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/number_text" />
+
+    <View
+        android:id="@+id/divider"
+        style="@style/Divider"
+        android:layout_height="@dimen/divider_item_height"
+        android:layout_marginVertical="@dimen/small"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fact_text" />
+</androidx.constraintlayout.widget.ConstraintLayout>

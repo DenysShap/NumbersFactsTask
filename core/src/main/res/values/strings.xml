@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dialog_positive_button_title">OK</string>
+    <string name="dialog_message">Input a number again</string>
+    <string name="dialog_title">Input is incorrect</string>
+</resources>

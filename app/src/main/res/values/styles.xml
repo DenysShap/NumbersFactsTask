@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/divider_header_height</item>
+        <item name="android:background">@color/grey</item>
+    </style>
+
+    <style name="TextNormal">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/numbers_title_text_size</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextBoldHeader">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/header_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>

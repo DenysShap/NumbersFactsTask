@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/interestingFactsNumbers">
+
+    <fragment
+        android:id="@+id/interestingFactsNumbers"
+        android:name="my.numb.numbersfactstask.feature.interestingfacts.ui.InterestingFactsNumbersFragment"
+        android:label="fragment_interesting_fact_numbers"
+        tools:layout="@layout/fragment_interesting_fact_numbers" >
+        <action
+            android:id="@+id/action_interestingFactsNumbers_to_detailsFactNumber"
+            app:destination="@id/detailsFactNumber" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFactNumber"
+        android:name="my.numb.numbersfactstask.feature.detailsfact.ui.DetailsFactNumberFragment"
+        android:label="fragment_details_fact_number"
+        tools:layout="@layout/fragment_details_fact_number" >
+        <action
+            android:id="@+id/action_detailsFactNumber_to_interestingFactsNumbers"
+            app:destination="@id/interestingFactsNumbers" />
+        <argument
+            android:name="factAboutNumber"
+            app:argType="my.numb.domain.model.FactAboutNumber" />
+    </fragment>
+</navigation>

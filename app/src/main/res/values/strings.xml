@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NumbersFactsTask</string>
+    <string name="input_number_text">Input a number</string>
+    <string name="get_fact_text">Get fact</string>
+    <string name="get_fact_about_random_number_text">Get fact about random number</string>
+    <string name="interesting_fact_text">Interesting fact:</string>
+    <string name="something_went_wrong_text">Something went wrong</string>
+    <string name="try_again_text">Try Again</string>
+    <string name="fact_about_numbers_text">Fact about numbers</string>
+    <string name="number_text">Number:</string>
+    <string name="lost_internet_connection_text">Internet connections is lost.\nThis functionalities isn\'t available.\nPlease turn on the network</string>
+</resources>

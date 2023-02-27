@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="numbers_title_text_size">18sp</dimen>
+    <dimen name="header_title_text_size">24sp</dimen>
+    <dimen name="error_message_text_size">18sp</dimen>
+</resources>

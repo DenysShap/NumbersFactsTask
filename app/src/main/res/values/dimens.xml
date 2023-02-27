@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small">8dp</dimen>
+    <dimen name="medium">16dp</dimen>
+    <dimen name="input_field_height">80dp</dimen>
+    <dimen name="divider_header_height">2dp</dimen>
+    <dimen name="divider_item_height">1dp</dimen>
+    <dimen name="padding_forward_image">6dp</dimen>
+</resources>
