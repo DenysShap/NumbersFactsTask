@@ -1,12 +1,14 @@
 package my.numb.numbersfactstask.feature.interestingfacts.ui
 
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import my.numb.core.util.BaseViewModel
+import my.numb.core.util.ProgressInterface
+import my.numb.core.util.ProgressInterfaceImpl
 import my.numb.domain.model.FactAboutNumber
 import my.numb.domain.usecases.*
 import my.numb.domain.util.Resource
@@ -19,10 +21,11 @@ class InterestingFactsViewModel @Inject constructor(
     private val getAllFactsNumbersUseCase: GetAllFactsNumbersUseCase,
     private val deleteAllFactsNumbersUseCase: DeleteAllFactsNumbersUseCase,
     private val networkStatusUseCase: NetworkStatusUseCase
-) : BaseViewModel() {
+) : ViewModel(), ProgressInterface by ProgressInterfaceImpl() {
 
     init {
         getAllFactsNumbers()
+        observeNetworkStatus()
     }
 
     private val mutableFactNumberState =
@@ -69,7 +72,7 @@ class InterestingFactsViewModel @Inject constructor(
         }
     }
 
-     fun observeNetworkStatus() {
+    private fun observeNetworkStatus() {
         viewModelScope.launch {
             networkStatusUseCase().collectLatest { networkStatus ->
                 mutableNetworkState.value = networkStatus
