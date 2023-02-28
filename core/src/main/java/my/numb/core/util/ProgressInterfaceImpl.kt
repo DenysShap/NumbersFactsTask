@@ -1,21 +1,20 @@
 package my.numb.core.util
 
-import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
-open class BaseViewModel : ViewModel() {
+class ProgressInterfaceImpl : ProgressInterface {
 
     private val mutableProgressBarState =
         MutableStateFlow<Progress>(Progress.HideProgress)
 
-    val progressBarState: StateFlow<Progress> = mutableProgressBarState
+    override val progressBarState: StateFlow<Progress> = mutableProgressBarState
 
-    fun showProgress() {
+    override fun showProgress() {
         mutableProgressBarState.value = Progress.ShowProgress
     }
 
-    fun hideProgress() {
+    override fun hideProgress() {
         mutableProgressBarState.value = Progress.HideProgress
     }
 }

@@ -1,12 +1,12 @@
 package my.numb.numbersfactstask.feature.detailsfact.ui
 
+import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import my.numb.core.util.BaseViewModel
 import my.numb.domain.model.FactAboutNumber
 import my.numb.domain.util.Resource
 
-class DetailsFactViewModel : BaseViewModel() {
+class DetailsFactViewModel : ViewModel() {
 
     private val mutableFactNumberState =
         MutableStateFlow<Resource<FactAboutNumber>>(Resource.Empty())
